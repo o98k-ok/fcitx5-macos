@@ -403,7 +403,7 @@ public:
 
 private:
     Instance *instance_;
-    std::shared_ptr<candidate_window::WebviewCandidateWindow> window_;
+    std::shared_ptr<candidate_window::WebviewCandidateWindowDecoupled> window_;
 
     static const inline std::string ConfPath = "conf/webpanel.conf";
     WebPanelConfig config_;

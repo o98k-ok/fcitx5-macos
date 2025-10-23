@@ -9,7 +9,7 @@ namespace fcitx {
 
 WebPanel::WebPanel(Instance *instance)
     : instance_(instance),
-      window_(std::make_shared<candidate_window::WebviewCandidateWindow>()) {
+      window_(std::make_shared<candidate_window::WebviewCandidateWindowDecoupled>()) {
     window_->set_select_callback([this](int index) {
         with_fcitx([&](Fcitx &fcitx) {
             auto ic = instance_->mostRecentInputContext();
